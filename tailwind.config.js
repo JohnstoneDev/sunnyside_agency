@@ -4,31 +4,18 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],  theme: {
     fontFamily : {
-      global : ['Inter', 'sans-serif'],
+      global  : ['Barlow', 'sans-serif'],
+      heading : ['Fraunces', 'sans-serif'],
     },
     fontSize : {
       'heading' : ['36px', {
           lineHeight : '40px',
           letterSpacing : '0px',
-          fontWeight : '800',
         }
       ],
-    'section' : ['24px', {
-        lineHeight : '32px',
-        letterSpacing : '0px',
-        fontWeight : '600',
-      }
-     ],
-   'button' : ['20px', {
-        lineHeight : '28px',
-        letterSpacing : '0px',
-        fontWeight : '500',
-      }
-    ],
     'regular' : ['18px', {
         lineHeight : '28px',
         letterSpacing : '0px',
-        fontWeight : '400',
       }
     ],
   },
@@ -37,6 +24,20 @@ module.exports = {
       'tablet': '640px',
       'laptop': '1024px',
       'desktop': '1280px',
+    },
+
+    colors: {
+      transparent : 'transparent',
+      'white' : 'hsl(0, 0%, 100%)',
+      'yellow' : 'hsl(51, 100%, 49%)',
+      'soft-red' : 'hsl(7, 99%, 70%)',
+      'dark-blue' : 'hsl(198, 34%. 41%)',
+      'grayish-blue' : 'hsl(210, 4%, 67%)',
+      'moderate-cyan' : 'hsl(168, 34%, 41%)',
+      'desaturated-cyan' : 'hsl(167, 40%, 24%)',
+      'desaturated-blue' : 'hsl(212, 27%, 19%)',
+      'dark-grayish-blue': 'hsl(232, 10%. 55%)',
+      'very-dark-grayish-blue': 'hsl(213, 9%, 39%)',
     },
     extend: {
     },
