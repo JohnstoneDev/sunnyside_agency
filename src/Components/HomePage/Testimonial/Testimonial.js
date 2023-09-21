@@ -30,15 +30,15 @@ const testmonials = [
 
 function Testimonial({ image, paragraph, name, title }) {
   return (
-    <div className='flex flex-col items-center justify-center gap-8 p-8'>
+    <div className='flex flex-col items-center justify-center gap-8 p-8 tracking-wide'>
       <div>
         <img src={image} alt=""  className='rounded-full h-24'/>
       </div>
       <div className='flex flex-col items-center justify-center gap-8'>
-        <p>{paragraph}</p>
+        <p className='text-desaturated-cyan'>{paragraph}</p>
         <section className='space-y-4'>
-          <h5>{name}</h5>
-          <span>{title}</span>
+          <h5 className='font-heading text-dark-grayish-blue font-semibold'>{name}</h5>
+          <span className='text-moderate-cyan'>{title}</span>
         </section>
       </div>
     </div>
@@ -49,8 +49,8 @@ export function TestimonialContainer() {
   return (
     <div className='text-center'>
       <div className='p-10 space-y-8'>
-        <h3 className='text-[30px] uppercase font-heading text-moderate-cyan'>Client Testimonials</h3>
-        <div className='flex gap-8'>
+        <h3 className='text-[28px] uppercase font-heading text-moderate-cyan tracking-wider'>Client Testimonials</h3>
+        <div className='flex gap-8 mobile:flex-col max-mobile:flex-col desktop:flex-row tablet:flex-row'>
           { testmonials.map(t => <Testimonial key={t.id} {...t} />) }
         </div>
       </div>

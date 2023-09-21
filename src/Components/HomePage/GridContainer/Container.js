@@ -18,7 +18,7 @@ const content = [
 
 function GridContainer({ heading, image, paragraph,  }) {
   return (
-    <div className='grid grid-cols-2 items-center justify-between gap-8'>
+    <div className='desktop:grid desktop:grid-cols-2 tablet:grid tablet:grid-cols-2 mobile:flex mobile:flex-col-reverse max-mobile:flex max-mobile:flex-col items-center justify-between gap-8'>
         <section className="font-heading flex flex-col items-start justify-between gap-6 p-8">
             <h2 className='text-heading text-desaturated-blue'>{heading}</h2>
             <p className="font-global text-moderate-cyan">{paragraph}</p>
@@ -31,7 +31,7 @@ function GridContainer({ heading, image, paragraph,  }) {
 
 function ReverseGridContainer({ heading, image, paragraph,  }) {
   return (
-    <div className='grid grid-cols-2 items-center justify-between gap-8'>
+    <div className='desktop:grid desktop:grid-cols-2 tablet:grid tablet:grid-cols-2 mobile:flex mobile:flex-col max-mobile:flex max-mobile:flex-col items-center justify-between gap-8'>
         <img src={image} alt="" className='w-full object-cover object-center'/>
         <section className="font-heading flex flex-col items-start justify-between gap-6 p-8">
             <h2 className='text-heading text-desaturated-blue'>{heading}</h2>
@@ -45,8 +45,8 @@ function ReverseGridContainer({ heading, image, paragraph,  }) {
 
 function FlexContainerOne() {
   return (
-    <div className='bg-cover pt-72 text-desaturated-cyan' style={{ backgroundImage : `url(${design})`}}>
-      <div className='text-center flex flex-col gap-6 pt-40'>
+    <div className='bg-cover mobile:bg-center pt-72 text-desaturated-cyan' style={{ backgroundImage : `url(${design})`}}>
+      <div className='text-center flex flex-col gap-6 p-12  pt-40'>
         <h3 className='font-heading text-heading'>Graphic Design</h3>
         <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
       </div>
@@ -57,8 +57,8 @@ function FlexContainerOne() {
 
 function FlexContainerTwo() {
   return (
-    <div className='bg-cover pt-72 text-dark-blue' style={{ backgroundImage : `url(${photography})`}}>
-      <div className='text-center flex flex-col gap-6 pt-40'>
+    <div className='bg-cover mobile:bg-center pt-72 text-dark-blue' style={{ backgroundImage : `url(${photography})`}}>
+      <div className='text-center flex flex-col gap-6 p-12 pt-40'>
         <h3 className='font-heading text-heading'>Photography</h3>
         <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
       </div>
@@ -68,10 +68,10 @@ function FlexContainerTwo() {
 
 export function Container() {
   return (
-      <div className='flex flex-col items-start justify-center'>
+      <div className='flex flex-col  items-start justify-center'>
         <GridContainer {...content[0]} />
         <ReverseGridContainer {...content[1]} />
-        <div className='flex items-center justify-center'>
+        <div className='flex desktop:flex-row tablet:flex-row mobile:flex-col max-mobile:flex-col items-center justify-center'>
             <FlexContainerOne/>
             <FlexContainerTwo/>
         </div>
