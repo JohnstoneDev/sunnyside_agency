@@ -1,9 +1,24 @@
-import { motion } from 'framer-motion'
+
+// images
+import header_img  from '../../Assets/images/desktop/image-header.jpg'
+
+// Components
+import { Hero } from "./Hero/Hero"
+import { Navigation } from "./Navigation/Navigation"
+import { Container } from './GridContainer/Container'
+import { TestimonialContainer } from './Testimonial/Testimonial'
+import { Footer } from './Footer/Footer'
 
 export const HomeComponent = () => {
 	return (
-		<motion.div className='flex flex-col gap-6 space-y-4 p-4'>
-				<h1 className='text-heading font-heading text-center'> Sunnyside Agency </h1>
-		</motion.div>
-	)
+			<div>
+				<div className="bg-transparent bg-center bg-cover" style={{ backgroundImage: `url(${header_img})`}}>
+				<Navigation />
+					<Hero />
+				</div>
+				<Container />
+				<TestimonialContainer />
+				<Footer />
+			</div>
+		)
 }

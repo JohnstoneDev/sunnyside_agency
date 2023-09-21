@@ -4,7 +4,7 @@ import { Paths } from './Routes/Routes';
 function App() {
   return (
     <div
-      className="text-regular font-global min-h-screen min-w-screen bg-white">
+      className="text-regular font-global min-h-screen min-w-screen">
       <Paths />
     </div>
   );
